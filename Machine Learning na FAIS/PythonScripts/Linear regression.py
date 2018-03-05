@@ -30,45 +30,47 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_val_score
+from sklearn.metrics import mean_squared_error
+
 
 def true(X):
-    return np.sin(5*X)
+    return np.sin(15 * X)+X
+
 
 np.random.seed(0)
-samples = 30
+samples = 300
 
-xtrain=np.sort(np.random .rand(samples))
-ytrain = true(xtrain) + np.random.randn(samples)*0.01
+xtrain = np.sort(np.random.rand(samples))
+ytrain = true(xtrain) + np.random.randn(samples)*2
 
-xval= np.linspace(0,1,100)
+xval = np.linspace(0, 1, 1000)
 yval = true(xval)
 
+degrees = np.arange(0, 25)
+scores = np.zeros_like(degrees,dtype=float)
+plt.figure(figsize=(16, 16))
+figsize=np.sqrt(degrees.size)
 
-degrees = np.arange(0,16)
-
-plt.figure(figsize=(10,10))
 for i in range(degrees.size):
-    ax = plt.subplot(4,4,i+1)
+    ax = plt.subplot(figsize, figsize, i + 1)
     plt.setp(ax, xticks=(), yticks=())
 
-    polynimial = PolynomialFeatures(degree=degrees[i],include_bias=True)
+    polynimial = PolynomialFeatures(degree=degrees[i], include_bias=True)
     linreg = LinearRegression()
-    pipe = Pipeline([("polynomial", polynimial),("linreg", linreg)])
+    pipe = Pipeline([("polynomial", polynimial), ("linreg", linreg)])
 
-    pipe.fit(xtrain[:,np.newaxis],ytrain)
+    pipe.fit(xtrain[:, np.newaxis], ytrain)
+    scores[i] = mean_squared_error(yval, pipe.predict(xval[:, np.newaxis]))
 
-    score = cross_val_score(pipe,xtrain[:,np.newaxis],ytrain,scoring="neg_mean_squared_error", cv=10)
-
-    plt.plot(xval, pipe.predict(xval[:, np.newaxis]), label="Model")
     plt.plot(xval, yval, label="True function")
-    plt.xlabel("poly degree{}".format(degrees[i]))
-    plt.scatter(xtrain, ytrain, edgecolor='b', s=20, label="Samples")
-    # plt.legend(loc="best")
+    plt.xlabel("polynomial degree {}".format(degrees[i]))
+    plt.scatter(xtrain, ytrain, edgecolor='b', s=20, label="Samples",alpha=0.1)
+    plt.plot(xval, pipe.predict(xval[:, np.newaxis]), label="Model")
+    print("{} / {}".format(i+1,degrees.size))
 plt.show()
 
-
-
-
-
-
-
+plt.plot(degrees, scores)
+plt.xlabel('polynomial degree')
+plt.ylabel('Mean Squared Error')
+plt.title('polynomial degree vs mean square error')
+plt.show()
