@@ -14,9 +14,11 @@ arr[[4,6],:].sum()
 
 arr[:,2]
 
-temp = np.copy(arr[3])
-arr[3]= arr[2]
-arr[2]=temp
+# temp = np.copy(arr[3])
+# arr[3]= arr[2]
+# arr[2]=temp
+
+arr2 = arr(([0,1,2,3,4,5,6,7],))
 
 arr = np.zeros((3,5))
 for x in range(5):
