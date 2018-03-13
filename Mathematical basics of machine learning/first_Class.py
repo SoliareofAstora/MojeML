@@ -48,8 +48,35 @@ x = np.random.uniform(0,10,(4,4))
 
 # # Zadania: numpy2 + pkt (za zrobienie większości)
 # 1. Odejmij od każdej kolumny średnią kolumny
+x -=x.sum(axis=0)/x.shape[1]
 # 2. Znajdź najbliższą wartość w macierzy (A) do podanej wartości (x)
-# 3. W macierzy 20x20 znajdź sumę w bloków, rozmiar bloku (5x5
+
+def find_nearest(array,value):
+    idx = (np.abs(array-value)).argmin()
+    return array[idx]
+
+value = 0.5
+
+print(find_nearest(x.flatten(), value))
+
+# 3. W macierzy 20x20 znajdź sumę w bloków, rozmiar bloku (5x5)
+x = np.ones((20,20))
+filter = np.ones((5,5))
+
+def getValue(i,j):
+    if  i>19 or j>19:
+        return 0
+    if i<0 or j<0:
+        return 0
+    return x[i,j]
+
+output = np.zeros_like(x)
+for i in range(20):
+    for j in range(20):
+        for a in range(-2,3):
+            for b in range(-2,3):
+                output[i,j]+=getValue(i+a,j+b)*filter[a+2,b+2]
+        
 # Więcej zadań (może częśc odpowiedzi nawet):
 #
 #  https://www.labri.fr/perso/nrougier/teaching/numpy.100/index.html
