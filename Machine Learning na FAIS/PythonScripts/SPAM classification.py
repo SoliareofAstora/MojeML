@@ -36,6 +36,9 @@ model.fit(xtrainDF,ytrain)
 prediction["multinomial"]=model.predict(xtestDF)
 accuracy_score(ytest,prediction['multinomial'])
 # 0.9883408071748879
+testText = vect.transform(['just click this link'])
+model.predict(testText)
+
 
 from sklearn.linear_model import LogisticRegression
 model = LogisticRegression()
