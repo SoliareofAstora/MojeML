@@ -10,7 +10,7 @@ from IPython.core.interactiveshell import InteractiveShell
 #
 # games.drop(games.index[516], inplace=True)
 #
-# games08 = games#.loc[games['release_year'] == 2008]
+# games08 = games.loc[games['release_year'] == 2008]
 # games08 = games08.round({'score':0})
 #
 # x = games08.groupby('score')['title'].count().index.values
