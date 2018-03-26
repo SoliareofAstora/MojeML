@@ -55,7 +55,7 @@ def IHate3():
         print(ihate3[i:i + 2])
 
 
-# IHate3()
+IHate3()
 
 def primenumbers(x):
     prime = np.ones(x)
@@ -92,7 +92,7 @@ def miarka(a, b):
             print(end=" ")
 
 
-# miarka(a = 99,b = 100)
+miarka(a = 99,b = 100)
 
 def geometric(n=1, a1=1, q=2):
     out = a1
@@ -101,7 +101,8 @@ def geometric(n=1, a1=1, q=2):
     return out
 
 
-# geometric(3,3,10)
+geometric(3,3,10)
+geometric()
 
 from scipy.stats import hmean
 
@@ -136,10 +137,10 @@ def doubleLetters(x):
                 out += x[i]
     return out
 
-# doubleLetters("Ala ma kotełka")
+doubleLetters("Ala ma kotełka")
 
-# a = input("a")
-# b = input("b")
-# c = input("c")
-# f = np.poly1d([a,b,c])
-# print(f.roots.real)
+a = input("a")
+b = input("b")
+c = input("c")
+f = np.poly1d([a,b,c])
+print(f.roots.real)
