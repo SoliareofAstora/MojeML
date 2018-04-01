@@ -10,6 +10,8 @@ posortowanie = np.sort(text)
 ojczyzny = len(np.where(posortowanie == 'Ojczyzno'))
 
 
+
+
 def primenumbers(x):
     prime = np.ones(x)
     for i in range(1, x):
@@ -32,4 +34,5 @@ b = [3, 4, 6, 0]
 
 e = a + b
 np.unique(e)
+
 

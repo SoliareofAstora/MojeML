@@ -120,22 +120,22 @@ def srednie(x=np.array([])):
 # srednie()
 
 
-import roman
-roman.fromRoman("XI")
-
-def doubleLetters(x):
-    out = ""
-    bul = True
-    for i in range(len(x)):
-        if x[i] == " ":
-            bul = not bul
-            out += " "
-        else:
-            if i % 2 == bul:
-                out += x[i] * 2
-            else:
-                out += x[i]
-    return out
+# import roman
+# roman.fromRoman("XI")
+#
+# def doubleLetters(x):
+#     out = ""
+#     bul = True
+#     for i in range(len(x)):
+#         if x[i] == " ":
+#             bul = not bul
+#             out += " "
+#         else:
+#             if i % 2 == bul:
+#                 out += x[i] * 2
+#             else:
+#                 out += x[i]
+#     return out
 
 doubleLetters("Ala ma kotełka")
 
