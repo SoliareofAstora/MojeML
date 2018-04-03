@@ -45,17 +45,18 @@ def howmanyint(N):
     return output
 
 
-print(howmanyint(100))
+print(howmanyint(1000))
 
-#
-#
-# def chech_anagram(a,b):
-#     return sorted(a)==sorted(b)
-#
-# a = "ojczyzno"
-# b = "alamakota"
-#
-# print(chech_anagram(a,b))
+
+
+def check_anagram(a,b):
+    return sorted(a)==sorted(b)
+
+
+print(check_anagram("abcd", "dcba") == True)
+print(check_anagram("aba", "baa") == True)
+print(check_anagram("aba", "ba") == False)
+print(check_anagram("tom marvolo riddle ", "i am lord voldemort") == True)
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz '
 key = 'zyxwvutsrqponmlkjihgfedcba '
@@ -83,8 +84,8 @@ decore(
 ##########################################33
 
 def even_numbers_from_list(data):
-    # return np.array(data)[np.where(np.mod(data, 2) == 0)]
-    return [i for i in data if i % 2 == 0]
+    return np.array(data)[np.where(np.mod(data, 2) == 0)]
+    # return [i for i in data if i % 2 == 0]
 
 
 print(even_numbers_from_list([1, 2, 3, 4]) == [2, 4])
