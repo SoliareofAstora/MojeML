@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_squared_error
 from sklearn import preprocessing
+from sklearn.model_selection import KFold,cross_val_score
 from math import fabs
 import time
 
-np.random.seed(10)
+np.random.seed(100)
 
 data = pd.read_csv('input/winequality-white.csv')
 
@@ -37,6 +38,10 @@ def gradient_descent_for_ridge(b, x, y, lr,alpha):
     b[1:] = b[1:] - lr * (((x.dot(b[1:]) + b[0]) - y).sum() * x.sum(axis=0)+alpha*b[1:]*2) / batch
 
 
+def R2(b,x,y):
+    rss = (((x.dot(b[1:]) + b[0]) - y)**2).sum()
+    tss = ((y-y.mean())**2).sum()
+    return (tss-rss)/tss
 
 
 class Ridge_Regression():
@@ -49,10 +54,12 @@ class Ridge_Regression():
         self.lr = learning_rate
 
     def fit(self, xtrain, ytrain, batchsize,epoch):
-        self.beta = np.random.rand(xtrain.shape[1] + 1)
+        self.beta = np.ones(xtrain.shape[1] + 1)
         old = np.ones_like(self.beta)
         new = np.zeros_like(self.beta)
         batch = 0
+        if  ytrain.size<batchsize:
+            batchsize = ytrain.size
         epoch += int(ytrain.size/batchsize)
         for a in range(epoch):
         # while fabs((old - new).sum()) > 0.00001:
@@ -72,33 +79,98 @@ class Ridge_Regression():
     def predict(self, xtest):
         return xtest.dot(self.beta[1:]) + self.beta[0]
 
+    def R2_score(self,x,y):
+        return R2(self.beta,x,y)
 
-model = Ridge_Regression(alpha=1,learning_rate=0.001)
+
+
+
 xtrain_scaled = preprocessing.scale(xtrain)
-
-start = time.time()
-model.fit(xtrain_scaled, ytrain, 100,10000)
-end = time.time()
-print(end-start)
-#took 0.575 seconds to train
 xtest_scaled = preprocessing.scale(xtest)
-pred = model.predict(xtest_scaled)
 
+lambdas=np.arange(-4,5)
+train_r_squared = np.zeros_like(lambdas,dtype=float)
+test_r_squared = np.zeros_like(lambdas,dtype=float)
+
+for ind, i in enumerate(lambdas):
+    # Fit ridge regression on train set
+    model = Ridge_Regression(alpha=i)
+    model.fit(xtrain_scaled, ytrain, 100, 10000)
+
+    # Evaluate train & test performance
+    train_r_squared[ind] = model.R2_score(xtrain_scaled, ytrain)
+    test_r_squared[ind] = model.R2_score(xtest_scaled, ytest)
+
+# Plotting
+plt.plot(lambdas, train_r_squared, 'bo-', label=r'$R^2$ Training set', color="darkblue", alpha=0.6, linewidth=3)
+plt.plot(lambdas, test_r_squared, 'bo-', label=r'$R^2$ Test set', color="darkred", alpha=0.6, linewidth=3)
+plt.xlabel('Lamda value'); plt.ylabel(r'$R^2$')
+plt.xlim(lambdas[0], lambdas[-1])
+plt.title(r'Evaluate ridge regression $R^2$ with different lamdas')
+plt.legend(loc='best')
+plt.grid()
+plt.show()
+
+
+# Nie wiem jak wpakować swój piękny model do cross_val_score :(
+# lambdas=np.arange(-4,5)
+# train_r_squared = np.zeros_like(lambdas,dtype=float)
+# test_r_squared = np.zeros_like(lambdas,dtype=float)
+# kfold = KFold(n_splits=5)
+#
+# for ind, i in enumerate(lambdas):
+#     # Fit ridge regression on train set
+#     model = Ridge_Regression(alpha=i)
+#     model.fit(xtrain_scaled, ytrain, 100, 10000)
+#
+#     results = cross_val_score(model, x, y, cv=kfold, scoring="r2")
+#     # Evaluate train & test performance
+#     train_r_squared[ind] = results.mean()
+#     test_r_squared[ind] = model.R2_score(xtest_scaled, ytest)
+#
+# # Plotting
+# plt.plot(lambdas, train_r_squared, 'bo-', label=r'$R^2$ Training set', color="darkblue", alpha=0.6, linewidth=3)
+# plt.plot(lambdas, test_r_squared, 'bo-', label=r'$R^2$ Test set', color="darkred", alpha=0.6, linewidth=3)
+# plt.xlabel('Lamda value'); plt.ylabel(r'$R^2$')
+# plt.xlim(lambdas[0], lambdas[-1])
+# plt.title(r'Evaluate 5-fold cv with different lamdas')
+# plt.legend(loc='best')
+# plt.grid()
+# plt.show()
+
+
+
+
+model = Ridge_Regression(alpha=0)
+model.fit(xtrain_scaled, ytrain, 100, 20000)
+pred=model.predict(xtest_scaled)
+# Evaluate train & test performance
 print("My ridge regression")
-print('meansquare {}'.format(mean_squared_error(ytest, pred))) #MSE 0.5941715624023438
+print('meansquare {}'.format(mean_squared_error(ytest, pred)))
 
 
 model = Ridge()
 model.fit(xtrain,ytrain)
 pred = model.predict(xtest)
 print("sklearn Ridge")
-print('meansquare {}'.format(mean_squared_error(ytest,pred))) #0.587126505288487
+print('meansquare {}'.format(mean_squared_error(ytest,pred)))
 
 
 model = LinearRegression()
 model.fit(xtrain,ytrain)
 pred = model.predict(xtest)
 print("sklearn lin reg")
-print('meansquare {}'.format(mean_squared_error(ytest,pred))) #0.571327137792465
+print('meansquare {}'.format(mean_squared_error(ytest,pred)))
 
+
+# My ridge regression
+# meansquare 0.5044287795218303
+# sklearn Ridge
+# meansquare 0.5059882185272939
+# sklearn lin reg
+# meansquare 0.499199345749985
+#
+# Mój model RidgeRegression daje wynik niewiele lepszy od implementacji tego modelu w SKlearn.
+# Różnica prawdopodobnie wynika z tego, że model z Sklearn działa na lambdzie = 1.
+# Nadal LinearRegression jest lepszy, co moim zdaniem wynika ze specyfiki problemu którego się podjąłem.
 
