@@ -26,10 +26,6 @@ x = np.array(data.drop(['quality'], axis=1))
 trainSize = int(data.shape[0] * 0.90)
 xtrain, xtest, ytrain, ytest = x[:trainSize], x[trainSize:], y[:trainSize], y[trainSize:]
 
-
-
-
-
 xtrain_scaled = preprocessing.scale(xtrain)
 xtest_scaled = preprocessing.scale(xtest)
 
