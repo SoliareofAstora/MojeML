@@ -5,7 +5,7 @@ cluster = np.array([1, 2, 3])
 
 
 class PCM():
-    m = 2
+
     centers = np.array([])
 
     def __init__(self, m=2):

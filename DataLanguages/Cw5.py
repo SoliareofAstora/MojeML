@@ -13,25 +13,25 @@ class MyList():
         self.arr = np.array(data)
 
     def max(self):
-        if self.arr.size>0:
+        if self.arr.size > 0:
             temp = self.arr[0]
             for element in self.arr:
-                if temp<element:
+                if temp < element:
                     temp = element
         return temp
 
     def min(self):
-        if self.arr.size>0:
+        if self.arr.size > 0:
             temp = self.arr[0]
             for element in self.arr:
-                if temp>element:
+                if temp > element:
                     temp = element
         return temp
+
 
 data = MyList([2, 2, 11, 4, 9])
 data.min()
 data.max()
-
 
 # Proszę napisać funkcję, która będzie obliczać wartości częściowo niepoprawnych wyrażeń:
 #
@@ -40,7 +40,6 @@ data.max()
 #     3*4**2**8***1.
 #
 # Przykładowo dla 28+32+++32++39 funkcja powinna zwrócić wartość 131.
-
 
 
 # Napisz program, który będzie sortował dane względem:
@@ -60,7 +59,7 @@ data = pd.DataFrame([('John', '20', '90'),
                      ('Jony', '17', '93'),
                      ('Json', '21', '85'),
                      ('Tom', '19', '80')]
-                    ,columns=['imie','wiek','wzrost'])
+                    , columns=['imie', 'wiek', 'wzrost'])
 
 data.sort_values(['imie'])
 data.sort_values(['wiek'])
@@ -75,6 +74,14 @@ data.sort_values(['wzrost'])
 #       (otrzymanej z poprzedniego podpunktu) do sześcianu,
 #     używając funkcji reduce i len oblicz średnią arytmetyczną z elementów otrzymanej listy z poprzedniego podpunktu.
 
+n=100
+podzielne4 = [x*4 for x in range(1,n)]
+niepodzielne8 = list(filter(lambda x: x%8!=0,podzielne4))
+
+szescian = list(map(lambda x: x**3,niepodzielne8))
+
+from functools import reduce
+reduce(lambda x,y: x/len(x),szescian)
 
 
 
@@ -90,6 +97,16 @@ data.sort_values(['wzrost'])
 # tych pracowników, którzy zarobili więcej, niż wyniosła średnia wypłata.
 
 
+nazwiska = ["Kowalski", "Przybył", "Nowak", "Konior", "Kaczka"]
+godziny = [105, 220, 112, 48, 79]
+stawka = [10.0, 17.0, 9.0, 18.0, 13.0]
+
+pensja = np.multiply(stawka,godziny)
+srednia = pensja.mean()
+
+zipped =list(zip(nazwiska,godziny,stawka,np.multiply(stawka,godziny)))
+
+
 # Napisz własny generator, który będzie zamieniał imiona, pisane małą literą, na imiona pisane z dużej litery, np.:
 #
 # ['anna', 'ala', 'ela', 'wiola', 'ola'] -> ['Anna', 'Ala', 'Ela', 'Wiola', 'Ola'].
@@ -98,3 +115,15 @@ data.sort_values(['wzrost'])
 # wybierał tylko imiona n-literowe,
 # np.: imiona 3-literowe ['anna', 'ala', 'ela', 'wiola', 'ola'] -> ['Ala', 'Ela', 'Ola']
 
+
+def upper(imiona, n):
+    for i in imiona:
+        if len(i) == n:
+            yield i.title()
+
+
+imie = ['anna', 'ala', 'ela', 'wiola', 'ola']
+gen = upper(imie, 3)
+
+for i in range(3):
+    print(next(gen))

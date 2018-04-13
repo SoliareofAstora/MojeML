@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../DataLanguages/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataLanguages/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataLanguages/Cw5.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DataLanguages/Cw5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonScripts/RidgeRegression_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonScripts/RidgeRegression_demo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,21 +16,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="HavingFunWithLolGame.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonScripts/HavingFunWithLolGame.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Possibilistic_c-means.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            <state relative-caret-position="340">
+              <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Possibilistic_c-means.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py">
+      <file leaf-file-name="Variable selection, Regularization and Principal Component Analysis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PythonScripts/Variable selection, Regularization and Principal Component Analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="-1785">
+              <caret line="45" selection-start-line="45" selection-end-line="49" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RidgeRegression.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonScripts/RidgeRegression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RidgeRegression_demo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonScripts/RidgeRegression_demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1367">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -72,6 +94,7 @@
         <option value="$PROJECT_DIR$/PythonScripts/RidgeRegression" />
         <option value="$PROJECT_DIR$/PythonScripts/RidgeRegression.py" />
         <option value="$PROJECT_DIR$/PythonScripts/RidgeRegression_demo.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" />
       </list>
     </option>
@@ -82,9 +105,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="996" />
-    <option name="width" value="931" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -186,7 +209,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="996" y="0" width="931" height="1087" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -196,7 +219,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.57447916" visible="true" weight="0.28556374" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297062" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27439725" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2833698" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" x="572" y="124" width="1133" height="625" id="SciView" order="4" sideWeight="0.7579909" weight="0.5722101" />
@@ -433,7 +456,6 @@
     <entry file="file://$PROJECT_DIR$/Lectur 1/Linear regression.py" />
     <entry file="file://$PROJECT_DIR$/LinearRegression/ign.csv" />
     <entry file="file://$PROJECT_DIR$/Notebooks/LinearRegression.ipynb" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
     <entry file="file://$PROJECT_DIR$/input/LOLgame.csv" />
     <entry file="file://$PROJECT_DIR$/../Mathematical basics of machine learning/first_Class.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -503,20 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonScripts/Variable selection, Regularization and Principal Component Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" selection-start-line="45" selection-end-line="49" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PythonScripts/RidgeRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python/Lib/site-packages/sklearn/metrics/regression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
@@ -538,27 +546,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonScripts/RidgeRegression_demo.py">
+    <entry file="file://$PROJECT_DIR$/PythonScripts/HavingFunWithLolGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="104" selection-end-line="117" />
+        <state relative-caret-position="357">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonScripts/RidgeRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonScripts/HavingFunWithLolGame.py">
+    <entry file="file://$PROJECT_DIR$/PythonScripts/RidgeRegression_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="-1367">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="340">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonScripts/Variable selection, Regularization and Principal Component Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1785">
+          <caret line="45" selection-start-line="45" selection-end-line="49" selection-end-column="10" />
         </state>
       </provider>
     </entry>

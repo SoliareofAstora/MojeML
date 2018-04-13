@@ -12,7 +12,6 @@ from PythonScripts.RidgeRegression import Ridge_Regression
 np.random.seed(100)
 
 data = pd.read_csv('input/winequality-white.csv')
-
 data = data.sample(frac=1).reset_index(drop=True)
 
 y = np.array(data['quality'])
