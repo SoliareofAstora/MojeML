@@ -136,6 +136,9 @@ plt.show()
 precision = confMatrix[1, 1] / confMatrix[:, 1].sum()
 recall = confMatrix[1, 1] / confMatrix[1, :].sum()
 f1 = 2 * confMatrix[1, 1] / (confMatrix[:, 1].sum() + confMatrix[1, :].sum())
+
+
+
 print("My precision score {}".format(precision))
 print("My recall score {}".format(recall))
 print("My F1 score {}".format(f1))
