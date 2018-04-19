@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" afterDir="false" />
-    </list>
+    <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
