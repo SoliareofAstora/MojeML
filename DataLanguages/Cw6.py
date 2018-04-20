@@ -37,6 +37,22 @@ maile=re.findall(pattern,tekst)
 for i in maile:
     print(i)
 
+
+# Typowym błędem przy szybkim wpisywaniu tekstu jest pisanie drugiej litery wyrazu dużą literą,
+# np. SZczecin (zamiast Szczecin) czy POlska (zamiast Polska). Napisz program,
+# wykorzystujący funkcję sub i wyrażenia regularne,
+# który poprawi wszystkie takie błędy w tekście wprowadzonym przez użytkownika.
+# Wyrazy dłuższe niż dwie litery mają być poprawiane automatycznie,
+# natomiast o podmianę wyrazu dwuliterowego (np. IT na It)
+# program ma pytać użytkownika za każdym razem, gdy na taki natrafi.
+
+tekst = "STudia IT SĄ FAjne"
+pattern = r'[A-Z][A-Z][a-z-]+'
+maile = re.finditer(pattern,tekst)
+for i in maile:
+    print(i)
+
+
 def ReverseCopy(path):
     text = open(path).read()
     wiersze = np.array(text.split("\n"))
