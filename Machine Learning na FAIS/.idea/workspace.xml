@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="" />
+    <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../DataLanguages/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataLanguages/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mathematical basics of machine learning/.idea/Mathematical basics of machine learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mathematical basics of machine learning/.idea/Mathematical basics of machine learning.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mathematical basics of machine learning/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mathematical basics of machine learning/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mathematical basics of machine learning/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mathematical basics of machine learning/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,13 +15,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Possibilistic_c-means.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="153">
+              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -184,15 +204,16 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.42552084" side_tool="true" weight="0.33619764" />
+      <window_info anchor="right" x="0" y="0" width="374" height="866" id="Documentation" order="5" sideWeight="0.25341427" side_tool="true" visible="true" weight="0.3294621" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.57447916" weight="0.29053319" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.57447916" visible="true" weight="0.28987068" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3297062" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.29219145" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" x="572" y="124" width="1133" height="625" id="SciView" order="4" sideWeight="0.7579909" weight="0.35012594" />
+      <window_info anchor="right" id="Database" order="3" sideWeight="0.49772382" weight="0.3294621" />
+      <window_info active="true" anchor="right" x="572" y="124" width="1133" height="625" id="SciView" order="4" sideWeight="0.7465857" visible="true" weight="0.3294621" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -200,34 +221,33 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" x="0" y="0" width="163" height="857" id="Documentation" order="5" sideWeight="0.24200913" side_tool="true" visible="true" weight="0.3398533" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29219145" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" x="572" y="124" width="1133" height="625" id="SciView" order="4" sideWeight="0.7579909" visible="true" weight="0.35012594" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29219145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.57447916" visible="true" weight="0.29053319" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="163" height="857" id="Documentation" order="5" sideWeight="0.24200913" side_tool="true" visible="true" weight="0.3398533" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3297062" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.42552084" side_tool="true" weight="0.33619764" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" x="572" y="124" width="1133" height="625" id="SciView" order="4" sideWeight="0.7579909" visible="true" weight="0.35012594" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.57447916" visible="true" weight="0.29053319" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,8 +575,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="153">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
         </state>
       </provider>
     </entry>
