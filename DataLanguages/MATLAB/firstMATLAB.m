@@ -1,6 +1,7 @@
 a = [2,3,1,1,1];
 [suma,iloczyn] = suma_iloczyn(a)
 
+
 function [suma,iloczyn] = suma_iloczyn(x) 
     suma = sum(x);
     iloczyn=1.;
@@ -8,7 +9,6 @@ function [suma,iloczyn] = suma_iloczyn(x)
         iloczyn = iloczyn * x(i);
     end
 end
-
 
 
 

@@ -32,7 +32,19 @@ ret = zad1(path)
 
 import re
 pattern = r'[\w\.-]+@[\w\.-]+'
-tekst = "costam@mail.xd a ty wlasnie gozapomniales. innymail@gmail.com Jak szybko go odnalezc?"
+tekst = """1 	Adam Kociszewski 	adam.kociszewski@uj.edu.pl
+2 	Aleksandra Nowak 	aleksandrairena.nowak@student.uj.edu.pl
+3 	Antonino Sota 	antonino.sota@student.uj.edu.pl
+4 	Bohdan Samotys 	bohdan.samotys@gmail.com
+5 	Jakub Banaśkiewicz 	jakub.banaskiewicz@student.uj.edu.pl
+6 	Karolina Bożek 	karolinam.bozek@student.uj.edu.pl
+7 	Maksymilian Klimczak 	maks.klimczak@gmail.com
+8 	Michał Grzejdziak 	mgrzejdziak@gmail.com
+9 	Michał Wróbel 	michal.andrzej.wrobel@student.uj.edu.pl
+10 	Piotr Kucharski 	piotr1kucharski@gmail.com
+11 	Przemysław Onak 	przemyslaw.onak@student.uj.edu.pl
+12 	Wojciech Sabała 	wojciech.sabala96@gmail.com
+13 	Piotr Żurek 	Zurcio50@gmail.com """
 maile=re.findall(pattern,tekst)
 for i in maile:
     print(i)
