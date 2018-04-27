@@ -2,7 +2,7 @@ f([-4 1 3]);
 
 B = [-5 8 1; 4 0 8]
 solve(B)
-c= [-2 0 ; 1 3]
+c = [-2 0 ; 1 3]
 solve(c)
 
 %https://www.mathworks.com/help/matlab/matlab_prog/find-array-elements-that-meet-a-condition.html
