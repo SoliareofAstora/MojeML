@@ -1,5 +1,5 @@
 import numpy as np
-
+np.__config__.show()
 # Napisz funkcję, która będzie zwracała:
 #
 #     liczbę wierszy,
@@ -48,7 +48,6 @@ tekst = """1 	Adam Kociszewski 	adam.kociszewski@uj.edu.pl
 maile=re.findall(pattern,tekst)
 for i in maile:
     print(i)
-
 
 # Typowym błędem przy szybkim wpisywaniu tekstu jest pisanie drugiej litery wyrazu dużą literą,
 # np. SZczecin (zamiast Szczecin) czy POlska (zamiast Polska). Napisz program,

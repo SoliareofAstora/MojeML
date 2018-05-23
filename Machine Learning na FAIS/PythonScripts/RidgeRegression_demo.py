@@ -17,10 +17,10 @@ data = data.sample(frac=1).reset_index(drop=True)
 y = np.array(data['quality'])
 x = np.array(data.drop(['quality'], axis=1))
 
-# corr_matrix = np.corrcoef(x.T)
-# plt.pcolor(corr_matrix)
-# plt.title('Heatmap of correlation matrix')
-# plt.show()
+corr_matrix = np.corrcoef(x.T)
+plt.pcolor(corr_matrix)
+plt.title('Heatmap of correlation matrix')
+plt.show()
 
 trainSize = int(data.shape[0] * 0.90)
 xtrain, xtest, ytrain, ytest = x[:trainSize], x[trainSize:], y[:trainSize], y[trainSize:]
@@ -28,13 +28,13 @@ xtrain, xtest, ytrain, ytest = x[:trainSize], x[trainSize:], y[:trainSize], y[tr
 xtrain_scaled = preprocessing.scale(xtrain)
 xtest_scaled = preprocessing.scale(xtest)
 
-lambdas=np.arange(-4,5)
+lambdas=np.arange(-7,7)
 train_r_squared = np.zeros_like(lambdas,dtype=float)
 test_r_squared = np.zeros_like(lambdas,dtype=float)
 
 for ind, i in enumerate(lambdas):
     # Fit ridge regression on train set
-    model = Ridge_Regression(alpha=i)
+    model = Ridge_Regression(alpha=10.0**i)
     model.fit(xtrain_scaled, ytrain, 100, 10000)
 
     # Evaluate train & test performance

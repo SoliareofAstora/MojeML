@@ -18,7 +18,7 @@ def R2(b,x,y):
     return (tss-rss)/tss
 
 
-class Ridge_Regression():
+class Ridge_Regression:
     alpha = 1
     lr = 0.001
     beta = np.array([])
