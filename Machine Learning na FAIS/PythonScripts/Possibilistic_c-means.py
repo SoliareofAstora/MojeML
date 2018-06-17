@@ -44,7 +44,7 @@ x=np.copy(X_norm)
 
 centroids =np.random.rand(2,2)
 assignation_matrix = np.random.rand(centroids.shape[0],x.shape[0])
-m=2
+m=3
 
 def new_assignation(data,centr,old_assignation):
     dist2 = np.zeros((centr.shape[0],data.shape[0]))

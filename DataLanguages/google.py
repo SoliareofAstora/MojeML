@@ -1,18 +1,16 @@
-import numpy as np
 import pandas as pd
 import re
-import encodings
 import matplotlib.pyplot as plt
 import datetime
 import seaborn as sns
-from sklearn.feature_extraction.text import CountVectorizer
 from itertools import chain
 from collections import Counter
 
 
 extractNewFile = False
 if extractNewFile:
-    html = open("input/google/alex.txt")
+
+    html = open("input/google/janek.txt")
     input = html.read()
     input = input.split("Wyszukiwano&nbsp;")
     html.close()
@@ -21,11 +19,6 @@ if extractNewFile:
     dateNtime = r'>\d{1,2} \S{3} \d{4},.{9}'
     date = r'\d{1,4}'
     day = r'\w{3}'
-    a = 50
-
-
-    # ekst = input[a].split("</div>")[0]
-    # czas = re.findall(dateNtime, ekst)
 
     def monthToNum(shortMonth):
 
@@ -64,9 +57,9 @@ if extractNewFile:
                 int(czas[4])
             )}, ignore_index=True)
 
-    data.to_csv('input/google/alex.csv', index=False)
+    data.to_csv('input/google/janek.csv', index=False)
 
-# data( ['search'] ['date']
+# data( ['search'] ['date'] )
 
 date_parser = lambda x:datetime.datetime(
     year = int(x[0:4]),
@@ -82,42 +75,60 @@ data = pd.read_csv('input/google/piter.csv')
 data['date'] = data['date'].map(date_parser)
 
 
-# plotowanie czestosci slow
-# data['search'] = [(a.lower()).split() for a in data['search']]
-# counter = Counter(chain.from_iterable(data['search']))
-#
-# common = ['how','to','i','to','the','z','na','do','is'
-#     ,'in','and','w','do','a','po','of','-','on','for'
-#        ,'o','–','co','czy']
-#
-# for i in range(100):
-#     counter[str(i)] = 0
-#
-# for i in common:
-#     counter[i] = 0
-#
-# a = counter.most_common(40)
-# words = [x[0] for x in a]
-# count = [x[1] for x in a]
-#
-# plt.plot(words,count)
-# plt.xticks(rotation = 90)
-# plt.show()
+counter = Counter(chain.from_iterable(data['search'].map(lambda x: (x.lower()).split())))
+common = ['how','to','i','to','the','z','na','do','is'
+    ,'in','and','w','do','a','po','of','-','on','for'
+       ,'o','–','co','czy']
+for i in range(100):
+    counter[str(i)] = 0
+for i in common:
+    counter[i] = 0
+a = counter.most_common(40)
+words = [x[0] for x in a]
+count = [x[1] for x in a]
+plt.plot(words,count)
+plt.xticks(rotation = 90)
+plt.show()
 
 
-data['year'] = data['date'].map(lambda x:x.year)
-data['weekday'] = data['date'].map(lambda x:x.weekday())
-data['hour'] = data['date'].map(lambda x:x.hour)
+plt.hist(data['date'],bins = 100)
+plt.xticks(rotation=90)
+plt.show()
+
+
+word = 'google'
+plt.hist(data[(data['search'].map(lambda x: (x.lower()).split())).map(lambda x:x.count(word)>0)]['date'],bins = 200)
+plt.xticks(rotation=90)
+plt.title(word)
+plt.show()
+
 
 # plotowanie gestosci wyszukiwan na dzien i na godzine
-# years = data['year'].unique()
-# for year in years:
-#
-#     plt.figure(figsize=(15, 4))
-#
-#     a = data[data['year']==year].groupby(['weekday','hour'])['search'].count().unstack().fillna(0)
-#     sns.heatmap(a,cmap='plasma')
-#     plt.title(year)
-#     plt.savefig('piter'+str(year))
+plt.figure(figsize=(15, 4))
+a = data.groupby([data['date'].map(lambda x:x.weekday()), data['date'].map(lambda x:x.hour)])['search'].count().unstack().fillna(0)
+sns.heatmap(a, cmap='plasma')
+plt.xlabel('hour')
+plt.ylabel('day of a week')
+plt.show()
 
 
+word = 'google'
+plt.figure(figsize=(15, 4))
+a = data[(data['search'].map(lambda x: (x.lower()).split())).map(lambda x:x.count(word)>0)].groupby([data['date'].map(lambda x:x.weekday()), data['date'].map(lambda x:x.hour)])['search'].count().unstack().fillna(0)
+sns.heatmap(a, cmap='plasma')
+plt.title(word)
+plt.xlabel('hour')
+plt.ylabel('day of a week')
+plt.show()
+
+
+years = data['date'].map(lambda x: x.year).unique()
+for year in years:
+
+    plt.figure(figsize=(15, 4))
+    a = data[data['date'].map(lambda x: x.year) == year].groupby([data['date'].map(lambda x:x.weekday()), data['date'].map(lambda x:x.hour)])['search'].count().unstack().fillna(0)
+    sns.heatmap(a,cmap='plasma')
+    plt.title(year)
+    plt.show()
+    # plt.savefig('ania'+str(year))
+    plt.close()
