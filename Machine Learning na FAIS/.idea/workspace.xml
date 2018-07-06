@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../DataLanguages/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DataLanguages/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataLanguages/google.py" beforeDir="false" afterPath="$PROJECT_DIR$/../DataLanguages/google.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonScripts/Possibilistic_c-means.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonScripts/ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonScripts/Perceptron_demo.py" afterDir="false" />
-    </list>
+    <list default="true" id="3d041f28-24e6-4773-bcd3-b5b2b29b2b8f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/PythonScripts/Perceptron_demo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -68,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/PythonScripts/MyPerceptron.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -618,7 +612,7 @@
     <entry file="file://$PROJECT_DIR$/PythonScripts/Perceptron_demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -628,7 +622,7 @@
     <entry file="file://$PROJECT_DIR$/PythonScripts/MyPerceptron.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
         </state>
       </provider>
     </entry>

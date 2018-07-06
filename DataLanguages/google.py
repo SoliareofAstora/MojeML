@@ -71,7 +71,7 @@ date_parser = lambda x:datetime.datetime(
 )
 
 
-data = pd.read_csv('input/google/piter.csv')
+data = pd.read_csv('input/google/alex.csv')
 data['date'] = data['date'].map(date_parser)
 
 
@@ -96,8 +96,8 @@ plt.xticks(rotation=90)
 plt.show()
 
 
-word = 'google'
-plt.hist(data[(data['search'].map(lambda x: (x.lower()).split())).map(lambda x:x.count(word)>0)]['date'],bins = 200)
+word = 'torrent'
+plt.hist(data[(data['search'].map(lambda x: (x.lower()).split())).map(lambda x:x.count(word)>0)]['date'],bins = 50)
 plt.xticks(rotation=90)
 plt.title(word)
 plt.show()
@@ -112,7 +112,7 @@ plt.ylabel('day of a week')
 plt.show()
 
 
-word = 'google'
+word = 'torrent'
 plt.figure(figsize=(15, 4))
 a = data[(data['search'].map(lambda x: (x.lower()).split())).map(lambda x:x.count(word)>0)].groupby([data['date'].map(lambda x:x.weekday()), data['date'].map(lambda x:x.hour)])['search'].count().unstack().fillna(0)
 sns.heatmap(a, cmap='plasma')
@@ -120,6 +120,7 @@ plt.title(word)
 plt.xlabel('hour')
 plt.ylabel('day of a week')
 plt.show()
+
 
 
 years = data['date'].map(lambda x: x.year).unique()
@@ -131,4 +132,4 @@ for year in years:
     plt.title(year)
     plt.show()
     # plt.savefig('ania'+str(year))
-    plt.close()
+    # plt.close()
