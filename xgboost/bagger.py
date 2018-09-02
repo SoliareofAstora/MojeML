@@ -2,7 +2,7 @@ from dtree import decisionTree
 import numpy as np
 
 class bagger:
-    def fit(self, x, y, nTrees=25, maxLevel=7, bagVolume=50):
+    def fit(self, x, y, nTrees=30, maxLevel=7, bagVolume=50):
         rowSample = (np.random.rand(nTrees, bagVolume) * len(x)).astype(int)
 
         self.trees = []

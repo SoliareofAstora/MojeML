@@ -1,6 +1,7 @@
 from dtree import decisionTree
 from bagger import bagger
 from boost import boost
+from WeightedBagger import WeightedBagger
 import xgboost as xgb
 
 import pandas as pd
@@ -45,8 +46,12 @@ sklearn = GradientBoostingClassifier()
 sklearn.fit(xtrain,ytrain)
 print("sklearn gradientboost: \t%.4f"%accuracy_score(ytest,sklearn.predict(xtest)))
 
-# boost = boost()
-# boost.fit(xtrain,ytrain)
-# print("\t  boosted forrest: \t%.4f"%accuracy_score(ytest,boost.predict(xtest)))
+wb = WeightedBagger()
+wb.fit(xtrain,ytrain)
+print("\t  weighted Bagger: \t%.4f"%accuracy_score(ytest,wb.predict(xtest)))
+
+boost = boost()
+boost.fit(xtrain,ytrain)
+print("\t  boosted forrest: \t%.4f"%accuracy_score(ytest,boost.predict(xtest)))
 
 

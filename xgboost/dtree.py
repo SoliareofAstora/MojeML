@@ -84,6 +84,3 @@ class decisionTree:
                 columnGini.append(gini)
             ginis.append(columnGini)
         return ginis
-
-
-
