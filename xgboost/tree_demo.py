@@ -1,4 +1,6 @@
-from bootstrap import *
+from dtree import decisionTree
+from bagger import bagger
+from boost import boost
 import xgboost as xgb
 
 import pandas as pd
@@ -43,9 +45,8 @@ sklearn = GradientBoostingClassifier()
 sklearn.fit(xtrain,ytrain)
 print("sklearn gradientboost: \t%.4f"%accuracy_score(ytest,sklearn.predict(xtest)))
 
-forrest = boostedForrest()
-forrest.fit(xtrain,ytrain)
-print("\t  boosted forrest: \t%.4f"%accuracy_score(ytest,forrest.predict(xtest)))
+# boost = boost()
+# boost.fit(xtrain,ytrain)
+# print("\t  boosted forrest: \t%.4f"%accuracy_score(ytest,boost.predict(xtest)))
 
-print("bad score probably because i have got math mistake somewhere")
 
