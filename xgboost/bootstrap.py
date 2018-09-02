@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class decisionTree:
 
     def classify(self, datapoint):

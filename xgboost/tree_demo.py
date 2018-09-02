@@ -29,15 +29,11 @@ print("the accuracy of models with the same \n")
 
 tree = decisionTree()
 tree.fit(xtrain,ytrain)
-print("Simple decision tree: \t%.4f"%accuracy_score(ytest,tree.predict(xtest)))
+print(" Simple decision tree: \t%.4f"%accuracy_score(ytest,tree.predict(xtest)))
 
 bagg = bagger()
 bagg.fit(xtrain,ytrain)
 print("Majority trees voting: \t%.4f"%accuracy_score(ytest,bagg.predict(xtest)))
-
-forrest = boostedForrest()
-forrest.fit(xtrain,ytrain)
-print("forrest with weights: \t%.4f"%accuracy_score(ytest,forrest.predict(xtest)))
 
 xgboost = xgb.XGBClassifier()
 xgboost.fit(xtrain,ytrain)
@@ -47,5 +43,9 @@ sklearn = GradientBoostingClassifier()
 sklearn.fit(xtrain,ytrain)
 print("sklearn gradientboost: \t%.4f"%accuracy_score(ytest,sklearn.predict(xtest)))
 
+forrest = boostedForrest()
+forrest.fit(xtrain,ytrain)
+print("\t  boosted forrest: \t%.4f"%accuracy_score(ytest,forrest.predict(xtest)))
 
+print("bad score probably because i have got math mistake somewhere")
 
