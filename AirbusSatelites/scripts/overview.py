@@ -117,6 +117,24 @@ def masks_as_color(in_mask_list):
     return all_masks
 
 
+
+arr = np.array(
+    [[0,0,0.2,0.5],
+     [0, 0, 0.2, 0.5],
+     [0, 1, 0.2, 0.5],
+     [0.1, 0.7, 0.2, 0.5]]
+)
+
+arr>0.4
+from skimage import morphology
+from skimage import measure
+
+measure.label(arr>0.4)
+
+
+
+
+
 import pickle
 
 
