@@ -2,6 +2,12 @@
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
 #include <stdio.h>
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+#include <iostream>
+
+
 
 cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
 
@@ -13,6 +19,19 @@ __global__ void addKernel(int *c, const int *a, const int *b)
 
 int main()
 {
+	
+	cv::Mat image;
+	image = cv::imread("image.jpg", cv::IMREAD_COLOR); // Read the file
+	if (image.empty()) // Check for invalid input
+	{
+		std::cerr << "Could not open or find the image" << std::endl;
+		return -1;
+	}
+	cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE); // Create a window for display.
+	imshow("Display window", image); // Show our image inside it.
+	cv::waitKey(0); // Wait for a keystroke in the window
+
+
     const int arraySize = 5;
     const int a[arraySize] = { 1, 2, 3, 4, 5 };
     const int b[arraySize] = { 10, 20, 30, 40, 50 };
